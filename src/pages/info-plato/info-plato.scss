@@ -1,0 +1,20 @@
+page-info-plato {
+    .card-background-page {
+        margin-top: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        ion-card {                     
+            display: block;
+            margin: auto;         
+            border-radius: 5%;  
+            max-width: 40%;
+                   
+          }                  
+      }
+    
+    @media screen and(min-width: 500px){
+        .star{
+            padding-left: 2cm;
+        }
+    }
+   
+}

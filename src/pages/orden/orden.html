@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ORDEN</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-label color="danger">(Para eliminar desliza a la derecha)</ion-label>
+  <img [src]="imagen" style="display: block;margin: auto;max-height: 80%;">
+    <ion-list *ngFor="let ord of orden">
+        <ion-item-sliding>
+          <ion-item>
+            <ion-avatar item-start>
+              <img [src]="ord.src">
+            </ion-avatar>
+            <h1>{{ord.nombre}}</h1>
+            <h3>$ {{ord.precio}}</h3>
+          </ion-item>
+          <ion-item-options side="left">
+            <button ion-button color="danger" (click)="eliminar(ord)">
+              <ion-icon name="md-trash"></ion-icon>
+              Eliminar
+            </button>            
+          </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <h5>Total: ${{total}}</h5>
+      <ion-buttons end>
+        <button ion-button icon-end color="royal" (click)="confirmar()">
+          Confirmar Pedido
+          <ion-icon name="md-checkmark"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

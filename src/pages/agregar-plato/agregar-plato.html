@@ -1,0 +1,64 @@
+<!--
+  VISTA PARA AGREGAR UN PLATO AL SISTEMA
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agregar Plato</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+      <ion-label stacked>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Precio</ion-label>
+      <ion-input type="number" [(ngModel)]="precio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Descripción</ion-label>
+      <ion-input type="text" [(ngModel)]="descripcion"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Ingredientes</ion-label>
+        <ion-input type="text" [(ngModel)]="ingredientes"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Categoría</ion-label>
+      <ion-select [(ngModel)]="categoria">
+        <ion-option value="Platos">Platos</ion-option>
+        <ion-option value="Bebidas">Bebidas</ion-option>
+        <ion-option value="Postres">Postres</ion-option>
+        <ion-option value="Promociones">Promociones</ion-option>          
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label stacked>SRC</ion-label>
+        <ion-input value=" " type="text" [(ngModel)]="src"></ion-input>
+    </ion-item>
+    <ion-row>
+        <ion-col></ion-col>        
+        <ion-col>
+            <img [src]="src"/>
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <button ion-button (click)="takePhoto()" block>Tomar Foto</button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    <div padding>
+      <button ion-button color="danger" block (click)="agregar()">Agregar</button>
+    </div>
+</ion-content>

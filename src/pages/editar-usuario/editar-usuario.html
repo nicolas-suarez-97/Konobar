@@ -1,0 +1,36 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Agregar Mesa</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <ion-item>
+        <ion-label stacked>Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label stacked>Contraseña</ion-label>
+        <ion-input type="text" [(ngModel)]="contrasena"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Categoría</ion-label>
+        <ion-input type="text" [(ngModel)]="categoria"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+          <ion-label stacked>Mesa #</ion-label>
+          <ion-input type="text" [(ngModel)]="numero"></ion-input>
+      </ion-item>
+  
+      <div padding>
+        <button ion-button color="danger" block (click)="modificar()">Modificar</button>
+      </div>
+  
+  </ion-content>
+  

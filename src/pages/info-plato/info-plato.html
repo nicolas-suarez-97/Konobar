@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <h1>{{plato.nombre}}</h1>    
+        <ion-buttons end >
+            <h1>$ {{plato.precio}}</h1>    
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" padding >
+    <ion-card>
+        <img [src]="plato.src" />
+    </ion-card>      
+    <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+            <ion-item class="star" no-lines>
+                <ionic3-star-rating 
+                    activeIcon = "ios-star"
+                    defaultIcon = "ios-star-outline"
+                    activeColor = "#EBBD00" 
+                    defaultColor = "#EBBD00"
+                    readonly="true"
+                    [rating]="plato.rating">
+                </ionic3-star-rating>    
+            </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>              
+    
+    <h3 >Descripción: </h3>
+    <ion-item no-lines>
+        {{plato.descripcion}}
+    </ion-item>
+    <h3 >Ingredientes: </h3>
+    <ion-item style="padding-left: 2cm" *ngFor="let ing of ingred" no-lines>
+        <ion-label>{{ing}}</ion-label>
+        <ion-checkbox checked="true" (click)="seleccion(ing)"></ion-checkbox>
+    </ion-item>         
+</ion-content>
+
+<ion-footer padding>
+    <button ion-button color ="danger"  block (click)="agregar()">
+        <ion-icon name="md-add"></ion-icon>
+        <p style="margin-left: 10px; ">Agregar</p>
+    </button>
+</ion-footer>

@@ -1,0 +1,53 @@
+<!--VISTA PARA AGREGAR UN USUARIO AL SISTEMA-->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agregar Mesa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+      <ion-label stacked>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Contraseña</ion-label>
+      <ion-input type="text" [(ngModel)]="contrasena"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Categoría</ion-label>
+      <ion-input type="text" [(ngModel)]="categoria"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label stacked>Mesa #</ion-label>
+        <ion-input type="text" [(ngModel)]="numero"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <div padding>
+          <button ion-button color="primary" outline block (click)="mesa()">Mesa</button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div padding>
+          <button ion-button color="primary" outline block (click)="cocina()">Cocina</button>
+        </div>
+      </ion-col>
+      <ion-col>
+          <div padding>
+            <button ion-button color="primary" outline block (click)="empleado()">Mesero</button>
+          </div>
+        </ion-col>
+    </ion-row>
+
+    <div padding>
+      <button ion-button color="danger" block (click)="agregar()">Agregar</button>
+    </div>
+
+</ion-content>

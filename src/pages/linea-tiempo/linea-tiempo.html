@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      TU PEDIDO
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button clear (click)="facturar(this.llave,this.usuario)" color="dark">
+            <!--<ion-icon name="logo-usd"></ion-icon>-->
+              Factura  
+        </button>
+        <button ion-button (click)="ayuda()">
+            <img src="assets/imgs/Campana.png" style="height: 40px;width: 40px;">
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img [src]="imagen" style="display: block;margin: auto;max-height: 80%;">
+  <timeline endIcon="md-checkbox-outline" >
+    <timeline-item *ngFor="let item of items">
+      <timeline-time [time]="item.time"></timeline-time>
+      <ion-icon [name]="item.icon"></ion-icon>
+      <ion-card>
+        <ion-card-header>
+          {{item.title}}
+        </ion-card-header>
+        <ion-card-content>
+          {{item.content}}
+        </ion-card-content>
+      </ion-card>
+    </timeline-item>
+  </timeline>
+
+  <ion-fab bottom right>
+    <button ion-fab color="danger" (click)="chat()"><ion-icon name="ios-chatbubbles"></ion-icon></button>
+</ion-fab> 

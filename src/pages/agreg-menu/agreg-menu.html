@@ -1,0 +1,27 @@
+<!--
+ VISTA LOS PLATOS EXISTENTES EN EL MENÚ
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>MENÚ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-fab bottom right>
+        <button ion-fab color="danger" (click)="agregarPlato()"><ion-icon name="md-add"></ion-icon></button>
+    </ion-fab> 
+    <ion-item *ngFor="let plato of platos">
+        <ion-thumbnail item-start>
+            <img [src]="plato.src">
+        </ion-thumbnail>
+        <h2>{{plato.nombre}} ${{plato.precio}}</h2>
+        <p>Ingredientes: {{plato.ingredientes}}</p>
+        <p>Categoría: {{plato.categoria}}</p>
+        <ion-icon name="md-create" (click)="editar(plato)" item-end></ion-icon>
+        <ion-icon name="md-trash" (click)="borrar(plato)" item-end></ion-icon>
+    </ion-item>
+</ion-content>

@@ -1,0 +1,53 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title center>
+      CHAT
+    </ion-title>
+  </ion-toolbar>
+  <ion-navbar>
+      <ion-title center>
+        <ion-input placeholder="Nombre" [(ngModel)]="userName"></ion-input>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content #content padding id="content">
+  <img [src]="imagen" style="display: block;margin: auto;max-height: 80%;">
+  <ion-row *ngFor = "let mensaje of mensajes">
+    <ion-col  col-9 *ngIf="mensaje.nombre==='Cocina'" >
+        <ion-card class="messageCocina">
+          <ion-card-header style="color:white">
+             {{mensaje.nombre}} dice:
+          </ion-card-header>
+          <ion-card-content>
+            {{mensaje.texto}}
+          </ion-card-content>
+        </ion-card>
+    </ion-col>
+    <ion-col offset-3 col-9 *ngIf="mensaje.nombre!=='Cocina'" >
+        <ion-card class="message">
+          <ion-card-header>
+             {{mensaje.nombre}} dice:
+          </ion-card-header>
+          <ion-card-content>
+            {{mensaje.texto}}
+          </ion-card-content>
+        </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <!--<div id = "content-end"></div>-->
+</ion-content>
+
+  <ion-footer padding>
+      <ion-toolbar>
+        <ion-input placeholder="Escribe algo..." [(ngModel)]="message" style="border-radius: 10px !important"></ion-input>
+        <ion-buttons end >
+          <button ion-button icon-right (click)="sendMessage()">
+            Enviar
+            <ion-icon name="send"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>>

@@ -1,0 +1,31 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-transform: uppercase">{{orden}}</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="demorado()" outline color="danger">
+            Pedido Demorado
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item *ngFor="let plato of platos">
+        <ion-avatar item-start>
+            <img [src]="plato.src">
+        </ion-avatar>
+        <h1>{{plato.nombre}}</h1>
+        <h2>Ingredientes: {{plato.ingredientes}}</h2>
+    </ion-item>
+    
+</ion-content>
+
+<ion-footer>
+    <ion-row>
+        <ion-col>
+            <button color="danger" ion-button (click)="despachado()" block>Despachar</button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

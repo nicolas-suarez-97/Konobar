@@ -1,0 +1,19 @@
+<ion-content class="card-background-page">
+    <ion-grid>
+        <ion-row>            
+            <ion-col col-6 col-md-4 col-xl-3 *ngFor="let plato of platos">
+                <ion-card class="image-container" (click)="openPage(plato)">
+                    <img [src]="plato.src"/>
+                    <ion-card-content>
+                        <h2 class="titulo">
+                            <ion-row>
+                                <ion-col>{{plato.nombre}}</ion-col>
+                                <ion-col>${{plato.precio}}</ion-col>
+                            </ion-row>                             
+                        </h2>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

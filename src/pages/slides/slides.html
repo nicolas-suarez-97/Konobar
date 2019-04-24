@@ -1,0 +1,42 @@
+ 
+  <ion-content class="tutorial-page">
+  
+      <ion-slides pager>
+        <ion-slide>
+          <ion-toolbar>
+            <ion-buttons end>
+              <button ion-button color="primary" (click)="setRoot(this.usuario)">Skip</button>
+            </ion-buttons>
+          </ion-toolbar>
+          <img src="assets/imgs/Sin título-3.png" class="slide-image" style="margin-top:150px;margin-bottom: 40px;"/>
+          <h2 class="slide-title">Bienvenido, toma asiento y ponte cómodo.</h2>             
+          <button ion-button large clear icon-end color="dark" >          
+            Deslízame
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>     
+        </ion-slide>
+  
+        <ion-slide *ngFor="let slide of slides">
+          <ion-toolbar>
+            <ion-buttons end (click)="setRoot(this.usuario)">
+              <button ion-button color="primary">Skip</button>
+            </ion-buttons>
+          </ion-toolbar>
+  
+          <h1 class="slide-title" [innerHTML]="slide.title"></h1>
+          <h5 [innerHTML]="slide.description"></h5>
+          <img [src]="slide.image" class="slide-image" (click)="ayuda()"/>      
+  
+        </ion-slide>
+        <ion-slide>
+          <ion-toolbar>
+          </ion-toolbar>
+          <h1 class="slide-title">¿Listo para ordenar?</h1>
+          <img src="assets/imgs/horno.jpg" style="display: block; margin: auto;" class="slide-image"/>
+          <button ion-button large clear icon-end color="primary" (click)="setRoot(this.usuario)">
+            Continuar
+          <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-slide>
+      </ion-slides>
+    </ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>COCINA</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="logout()" icon-only>
+            <ion-icon name="ios-log-out" ></ion-icon>            
+        </button>       
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <img [src]="imagen" style="display: block;margin: auto;max-height: 80%;">
+  <ion-list>
+    <ion-item-sliding *ngFor="let llav of llaves">
+      <ion-item detail-push  (click)="verOrden(llav)" >        
+        <ion-label style="text-transform: capitalize">{{llav}}</ion-label>        
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+

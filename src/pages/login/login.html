@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <img src="assets/imgs/Sin título-3.png" style="height: 20px;display:block;margin: auto;">
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="userName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" value="" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="login()">Sign In</button>
+  </div>
+
+</ion-content>

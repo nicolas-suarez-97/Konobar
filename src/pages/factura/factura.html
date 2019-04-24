@@ -1,0 +1,42 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>FACTURA</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <img [src]="imagen" style="display: block;margin: auto;max-height:80%;">
+    <ion-list *ngFor="let plato of platos">        
+      <ion-item>
+        <ion-row>
+          <ion-col>
+            <h1>{{plato.nombre}}</h1>
+          </ion-col>
+          <ion-col>
+            <h1>$ {{plato.precio}}</h1>
+          </ion-col>
+        </ion-row>        
+      </ion-item>        
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+  <h5>Total: ${{total}}</h5>
+  <ion-row>
+    <ion-col>
+      <button ion-button block (click)="pedir(this.usuario)">          
+          <p style="margin-left: 10px; ">Continuar pidiendo</p>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color ="danger"  block (click)="pagar(this.usuario)">
+          <ion-icon name="logo-usd"></ion-icon>
+          <p style="margin-left: 10px; ">Pagar</p>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,20 @@
+<!--VISTA ADMINISTRATIVA, SE DESPLIEGAN LAS OPCIONES QUE TIENE EL ADINISTRADOR-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ADMINISTRACIÓN</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-list >
+    <ion-item (click)="agregarMenu()"> <ion-icon name="ios-basket" item-start></ion-icon><h1>Menú</h1></ion-item>
+    <ion-item (click)="reporteFinanciero()">  <ion-icon name="ios-paper" item-start></ion-icon><h1>Reporte Financiero</h1></ion-item>
+    <ion-item (click)="agregarMesa()">  <ion-icon name="md-add" item-start></ion-icon><h1>Agregar Empleado / Mesa</h1></ion-item>
+    <ion-item (click)="ordenes()">  <ion-icon name="md-filing" item-start></ion-icon><h1>Ordenes</h1></ion-item>
+    <!--<ion-item (click)="inventario()"> <ion-icon name="ios-folder-open" item-start></ion-icon> Inventario</ion-item>-->
+    <ion-item (click)="salir()">  <ion-icon name="ios-log-out" item-start></ion-icon><h1>Salir</h1></ion-item>
+  </ion-list>
+</ion-content>
