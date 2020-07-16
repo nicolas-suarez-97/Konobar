@@ -10,6 +10,6 @@ This was a project made with learning purpose. And can be found [here](https://k
 
 ## Application: 
 
-![Gif1](https://github.com/nicolas-suarez-97/Konobar/blob/master/AppGif.gif | height="100")
+![Gif1](https://github.com/nicolas-suarez-97/Konobar/blob/master/AppGif.gif)
 
 ![Gif1](https://github.com/nicolas-suarez-97/Konobar/blob/master/AppGif2.gif | height="100")
